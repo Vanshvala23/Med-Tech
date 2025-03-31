@@ -9,7 +9,7 @@ function Faq() {
           Frequently asked Questions (FAQ){" "}
           <span className="font-bold text-[#1c7856]">MediLinkPlus</span>
         </h1>
-        <div className="mt-60 w-90 md:w-400">
+        <div className="mt-40 w-90 md:w-400">
           <div className="collapse collapse-arrow bg-base-100 border border-black">
             <input type="radio" name="my-accordion-2" defaultChecked />
             <div className="collapse-title font-semibold">

@@ -10,11 +10,11 @@ function Contact() {
     return (
       <>
         <div className="max w-scrren-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row">
-          <div className=" w-full order-2 md:order-1 md:w-1/2 mt-40">
+          <div className=" w-full order-2 md:order-1 md:w-1/2 mt-20">
             <h1 className="font-bold text-4xl">
               Contact <span className="text-[#1c7856] font-bold">Us</span>
             </h1>
-            <div className="mt-5 space-y-2">
+            <div className="mt-4 space-y-2">
               <span>Name :</span>
               <br />
               {errors.name && (

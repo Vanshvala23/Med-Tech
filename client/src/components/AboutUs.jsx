@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 function AboutUs() {
   return (
     <>
-      <Link to ="/">
+      {/* <Link to ="/">
         <button className="bg-[#1c7856] mt-35 rounded-full font-bold px-4 py-2 hover:bg-green-300 duration-300 cursor-pointer ">
           Back
         </button>
-      </Link>
+      </Link> */}
       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 my-30">
         <div>
           <h1 className="text-3xl font-semibold md:text-3xl mt-15">
