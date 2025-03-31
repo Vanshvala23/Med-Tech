@@ -1,7 +1,7 @@
 import React from "react";
-import phone from "../../public/phone.png";
-import email from "../../public/email.png";
-import location from "../../public/location.png";
+import phone from "../assets/phone.png";
+import email from "../assets/email.png";
+import location from "../assets/location.png";
 
 function Get() {
   return (

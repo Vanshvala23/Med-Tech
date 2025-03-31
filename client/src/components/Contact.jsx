@@ -1,5 +1,5 @@
 import React from "react";
-import contact from "../../public/Contactus.png"
+import contact from "../assets/Contactus.png"
 import { useForm } from "react-hook-form";
 function Contact() {
     const {

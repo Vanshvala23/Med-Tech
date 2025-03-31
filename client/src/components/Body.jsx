@@ -1,5 +1,5 @@
 import React from "react";
-import Bodybanner from "../../public/Bodybanner.png";
+import Bodybanner from "../assets/Bodybanner.png";
 import Login from "./Login";
 
 function Body() {

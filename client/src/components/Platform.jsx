@@ -1,5 +1,5 @@
 import React from "react";
-import doctor from "../../public/Doctor.png"
+import doctor from "../assets/Doctor.png"
 
 function Platform() {
   return (

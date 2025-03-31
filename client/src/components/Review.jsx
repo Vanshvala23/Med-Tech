@@ -1,7 +1,7 @@
 import React from "react";
-import male from "../../public/Male.png";
-import female from "../../public/Female.png";
-import bot from "../../public/Bot.png";
+import male from "../assets/Male.png";
+import female from "../assets/Female.png";
+import bot from "../assets/Bot.png";
 function Review() {
   return (
     <>

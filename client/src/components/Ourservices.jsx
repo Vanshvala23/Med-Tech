@@ -2,10 +2,10 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import Appoint from "../../public/Appoint.png";
-import Record from "../../public/Record.png";
-import QR from "../../public/QR.png";
-import Refills from "../../public/Refills.png";
+import Appoint from "../assets/Appoint.png";
+import Record from "../assets/Record.png";
+import QR from "../assets/QR.png";
+import Refills from "../assets/Refills.png";
 import Login from "./Login";
 function Ourservices() {
   var settings = {
