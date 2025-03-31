@@ -2,7 +2,14 @@ import React from "react";
 import male from "../assets/Male.png";
 import female from "../assets/Female.png";
 import bot from "../assets/Bot.png";
+import ChatBot from "./ChatBot";
 function Review() {
+  const [showChatBox,setShowChatBox] = React.useState(false);
+
+  const handleChatBotToggle=()=>
+  {
+    setShowChatBox((prev)=>!showChatBox);
+  }
   return (
     <>
       <div className="mt-20">
@@ -46,11 +53,12 @@ function Review() {
         <div className="w-full md:w-1/2">
           <h1 className="text-3xl font-semibold mt-4">Got Questions?</h1>
           <h4 className="mt-3">Our AI Assistant is here to help 24/7</h4>
-          <button className="btn bg-[#1c7856] hover:bg-green-200 mt-3 duration-300">Try AI Assistant</button>
+          <button className="btn bg-[#1c7856] hover:bg-green-200 mt-3 duration-300" onClick={handleChatBotToggle}>Try AI Assistant</button>
         </div>
-        <div>
+        {showChatBox && <ChatBot />}
+        {/* <div>
           <img src={ bot} className="p-4" alt="bot" />
-        </div>
+        </div> */}
       </div>
     </>
   );
