@@ -40,7 +40,7 @@ function Navbar() {
               />
             </div>
             <button
-              className="bg-green-600 text-white px-4 py-2 rounded-lg cursor-pointer"
+              className="bg-green-800 text-white px-4 py-2 rounded-lg cursor-pointer"
               onClick={() => document.getElementById("my_modal_3").showModal()}
             >
               Login
