@@ -17,7 +17,7 @@ function Navbar() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 w-full ${
-          sticky ? "bg-gray-300 shadow-lg" : "bg-gray-300"
+          sticky ? "bg-[#d9d9d9] shadow-lg" : "bg-[#d9d9d9]"
         }`}
       >
         <div className="max-w-screen-xl mx-auto flex items-center justify-between px-6 py-4">
