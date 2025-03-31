@@ -5,6 +5,7 @@ import Ourservices from '../components/Ourservices'
 import Platform from '../components/Platform'
 import Review from '../components/Review'
 import Get from '../components/Get'
+// import chatBot from '../components/ChatBot'
 import Footer from '../components/Footer'
 
 function Home() {
@@ -16,6 +17,7 @@ function Home() {
               <Platform />
               <Review />
               <Get/>
+              {/* <chatBot/> */}
             <Footer />
         </>
    
