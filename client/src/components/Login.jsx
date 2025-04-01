@@ -1,20 +1,28 @@
-import React, { useRef } from "react";
+import React, { useRef,useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-
+import axios from "axios";
 function Login() {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const [errorMessage,setErrorMessage] = useState("");
 
   const dialogRef = useRef(null);
 
-  const onSubmit = (data) => {
+  const onSubmit = async(data) => {
     console.log(data);
     if (dialogRef.current) {
       dialogRef.current.close();
+    }
+    try
+    {
+      const response = await axios.post("http://localhost:3000/auth/signup",data,{withCredentials:true});
+      console.log(response);
+    }catch(error){
+      setErrorMessage(error.response.data.message);
     }
   };
 
