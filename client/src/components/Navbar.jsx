@@ -4,6 +4,7 @@ import Login from "./Login";
 
 function Navbar() {
   const [sticky, setSticky] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +13,10 @@ function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <>
@@ -24,12 +29,24 @@ function Navbar() {
           <a href="/">
             <img src={Logo} alt="Logo" className="h-12 w-auto object-contain" />
           </a>
-          <ul className="hidden md:flex space-x-6 text-lg text-gray-800">
-            <li><a href="/" className="hover:text-gray-600">Home</a></li>
-            <li><a href="/contact" className="hover:text-gray-600">Contact Us</a></li>
-            <li><a href="/about" className="hover:text-gray-600">About Us</a></li>
-            <li><a href="#" className="hover:text-gray-600">Consult Doctor</a></li>
-            <li><a href="/faq" className="hover:text-gray-600">FAQ</a></li>
+          <div className="md:hidden">
+            <button
+              onClick={toggleMobileMenu}
+              className="text-gray-800 focus:outline-none"
+            >
+              {isMobileMenuOpen ? "✖" : "☰"}
+            </button>
+          </div>
+          <ul
+            className={`${
+              isMobileMenuOpen ? "block" : "hidden"
+            } md:flex space-x-6 text-lg text-gray-800 absolute md:static bg-white md:bg-transparent w-full md:w-auto top-full left-0 md:top-auto md:left-auto`}
+          >
+            <li><a href="/" className="block px-4 py-2 hover:text-gray-600">Home</a></li>
+            <li><a href="/contact" className="block px-4 py-2 hover:text-gray-600">Contact Us</a></li>
+            <li><a href="/about" className="block px-4 py-2 hover:text-gray-600">About Us</a></li>
+            <li><a href="#" className="block px-4 py-2 hover:text-gray-600">Consult Doctor</a></li>
+            <li><a href="/faq" className="block px-4 py-2 hover:text-gray-600">FAQ</a></li>
           </ul>
           <div className="flex items-center space-x-4">
             <div className="hidden md:block font-black text-black">
