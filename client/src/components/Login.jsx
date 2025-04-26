@@ -19,7 +19,7 @@ function Login() {
     }
     try
     {
-      const response = await axios.post("http://localhost:3000/auth/signup",data,{withCredentials:true});
+      const response = await axios.post("http://localhost:3000/auth/signin",data,{withCredentials:true});
       console.log(response);
     }catch(error){
       setErrorMessage(error.response.data.message);
@@ -94,6 +94,7 @@ function Login() {
                 </Link>
               </p>
             </div>
+            
           </form>
         </div>
       </dialog>
