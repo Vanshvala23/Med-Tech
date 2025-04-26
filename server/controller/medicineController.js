@@ -1,5 +1,5 @@
 const Medicines = require('../models/Medicine');
-
+const {generateQR} = require('../utils/qrCodegenerator');
 exports.addMedicine = async (req, res) => {
     try {
         const { name, brand, company, quantity, price } = req.body;
@@ -64,3 +64,24 @@ exports.deleteMedicine = async (req, res) => {
       res.status(500).json({ error: error.message });
     }
   };
+  exports.generateQRCode = async (req, res) => {
+    try {
+        const medicine = await Medicines.findById(req.params.medicineId); // Change here
+        if (!medicine) {
+            return res.status(404).json({ message: 'Medicine not found' });
+        }
+        const qrData = {
+            name: medicine.name,
+            brand: medicine.brand,
+            company: medicine.company,
+            quantity: medicine.quantity,
+            price: medicine.price
+        };
+        const qrCode = await generateQR(JSON.stringify(qrData));
+        res.set('Content-Type', 'image/png');
+        res.send(Buffer.from(qrCode.split(",")[1], 'base64'));
+        // res.status(200).json({ message: 'QR code generated successfully', qrCode });
+    } catch (error) {
+        res.status(500).json({ message: 'Error generating QR code', error });
+    }
+};
