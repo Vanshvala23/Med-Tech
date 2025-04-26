@@ -27,12 +27,12 @@ function Navbar() {
       >
         <div className="max-w-screen-xl mx-auto flex items-center justify-between px-6 py-4">
           <a href="/">
-            <img src={Logo} alt="Logo" className="h-12 w-auto object-contain" />
+            <img src={Logo} alt="Logo" className="h-16 w-32 object-contain" />
           </a>
           <div className="md:hidden">
             <button
               onClick={toggleMobileMenu}
-              className="text-gray-800 focus:outline-none"
+              className="text-gray-800 focus:outline-none mb-1 mx-2"
             >
               {isMobileMenuOpen ? "✖" : "☰"}
             </button>
